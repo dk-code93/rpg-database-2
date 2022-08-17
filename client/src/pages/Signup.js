@@ -23,6 +23,17 @@ function Signup() {
         });
     }
 
+    const handleSubmit = async (event) => {
+        try {
+            const { data } = await addUser({
+                variables: { ...formState }
+            });
+            Auth.login(data.addUser.token);
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
     return (
         <Container>
             <Form>
@@ -32,6 +43,8 @@ function Signup() {
                         type='username' 
                         placeholder="Create a custom Username"
                         name="username"
+                        onChange={handleChange}
+                        defaultValue={formState.username}
                     />
                 </Form.Group>
                 
@@ -41,6 +54,8 @@ function Signup() {
                         type='email' 
                         placeholder="Enter your email address"
                         name="email"
+                        onChange={handleChange}
+                        defaultValue={formState.email}
                     />
                 </Form.Group>
 
@@ -50,10 +65,16 @@ function Signup() {
                         type='password' 
                         placeholder="Create a password" 
                         name='password'
+                        onChange={handleChange}
+                        defaultValue={formState.password}
                     />
                 </Form.Group>
 
-                <Button variant="dark" type='submit'>
+                <Button 
+                    variant="dark" 
+                    type='submit'
+                    onSubmit={handleSubmit}
+                >
                     Sign up!
                 </Button>
             </Form>
