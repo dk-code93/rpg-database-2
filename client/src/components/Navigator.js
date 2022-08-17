@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
-function Nav() {
+function Navigator() {
     return (
         <Navbar bg='dark' variant='dark'>
             <Container fluid>
@@ -11,4 +11,4 @@ function Nav() {
     )
 };
 
-export default Nav;
+export default Navigator;
