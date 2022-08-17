@@ -13,6 +13,8 @@ const characterSchema = new Schema({
       unique: true,
       match: [/.+@.+\..+/, 'Must match an email address!'],
     },
+}, {
+    timestamps: true,
 });
   
 const User = model('Character', characterSchema);
