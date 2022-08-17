@@ -1,6 +1,10 @@
 
 const resolvers = {
-    Query: {},
+    Query: {
+        user: async (_parent, { userId }) => {
+          return User.findOne({ _id: userId });
+        },
+    },
     Mutation: {
         addUser: async (_parent, { username, email, password }) => {
             const user = await User.create({ username, email, password });
