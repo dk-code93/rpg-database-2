@@ -1,4 +1,5 @@
 import React from 'react';
+import Main from './Main';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 const client = new ApolloClient({
@@ -10,7 +11,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      {/* <Main/> */}
+      <Main/>
     </ApolloProvider>
   );
 }
