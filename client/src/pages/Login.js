@@ -17,7 +17,7 @@ function Login() {
                 </Form.Group>
 
                 <Button variant="dark" type='submit'>
-                    Submit
+                    Log in!
                 </Button>
 
                 <Button variant="dark" href='/signup'>
