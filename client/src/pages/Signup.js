@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Form, Button } from "react-bootstrap";
 
 
-function Login() {
+function Signup() {
     return (
         <Container>
             <Form>
@@ -22,15 +22,11 @@ function Login() {
                 </Form.Group>
 
                 <Button variant="dark" type='submit'>
-                    Submit
-                </Button>
-
-                <Button variant="dark" href='/signup'>
-                    Don't have an account?
+                    Sign up!
                 </Button>
             </Form>
         </Container>
     )
 }
 
-export default Login;
+export default Signup;
