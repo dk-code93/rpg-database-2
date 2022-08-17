@@ -8,7 +8,7 @@ function Signup() {
             <Form>
                 <Form.Group className="mb-2" controlId="username">
                     <Form.Label>Username</Form.Label>
-                    <Form.Control type='username' placeholder="Enter a custom Username" />
+                    <Form.Control type='username' placeholder="Create a custom Username" />
                 </Form.Group>
                 
                 <Form.Group className="mb-2" controlId="email">
@@ -18,7 +18,7 @@ function Signup() {
 
                 <Form.Group className="mb-2" controlId="password">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type='password' placeholder="Enter a password" />
+                    <Form.Control type='password' placeholder="Create a password" />
                 </Form.Group>
 
                 <Button variant="dark" type='submit'>
