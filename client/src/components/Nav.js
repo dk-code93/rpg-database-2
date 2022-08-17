@@ -5,7 +5,7 @@ function Nav() {
     return (
         <Navbar bg='dark' variant='dark'>
             <Container fluid>
-                <Navbar.Brand href='#home'>RPG Database</Navbar.Brand>
+                <Navbar.Brand href='/'>RPG Database</Navbar.Brand>
             </Container>
         </Navbar>
     )
