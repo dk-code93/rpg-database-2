@@ -1,8 +1,12 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
+import Nav from './components/Nav'
 
 function Main() {
     return (
-        <div></div>
+        <Container fluid>
+            <Nav/>
+        </Container>
     )
 }
 
