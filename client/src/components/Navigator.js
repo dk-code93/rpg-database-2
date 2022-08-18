@@ -21,7 +21,6 @@ function Navigator() {
                             </Nav.Link>
                         </Nav.Item>
                     )
-
                     }
                 </Nav>
                 
