@@ -1,6 +1,9 @@
 
 const resolvers = {
     Query: {
+        users: async () => {
+          return User.find().populate('characters').populate('favorites');
+        },
         user: async (_parent, { userId }) => {
           return User.findOne({ _id: userId });
         },
