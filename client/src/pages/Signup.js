@@ -25,7 +25,7 @@ function Signup() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+        console.log('butt got press', formState)
         try {
             const { data } = await addUser({
                 variables: { ...formState }
@@ -38,7 +38,7 @@ function Signup() {
 
     return (
         <Container>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-2" controlId="username">
                     <Form.Label>Username</Form.Label>
                     <Form.Control 
@@ -74,8 +74,7 @@ function Signup() {
 
                 <Button 
                     variant="dark" 
-                    type='submit'
-                    onSubmit={handleSubmit}
+                    type="submit"
                 >
                     Sign up!
                 </Button>

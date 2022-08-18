@@ -27,7 +27,7 @@ class AuthService {
     const {data} = decode(idToken);
     localStorage.setItem('favorites', JSON.stringify(data.favorites));
     localStorage.setItem('id_token', idToken);
-    window.location.assign('/profile');
+    window.location.assign('/');
   }
 
   logout() {
