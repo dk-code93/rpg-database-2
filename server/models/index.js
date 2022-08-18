@@ -1,4 +1,4 @@
-import Character from './Character';
-import User from './User';
+const Character =  require('./Character');
+const User =  require('./User');
 
 module.exports = { Character, User };

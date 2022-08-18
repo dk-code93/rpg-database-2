@@ -17,6 +17,6 @@ const characterSchema = new Schema({
     timestamps: true,
 });
   
-const User = model('Character', characterSchema);
+const Character = model('Character', characterSchema);
   
-module.exports = User;
+module.exports = Character;

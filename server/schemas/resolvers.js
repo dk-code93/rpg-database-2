@@ -1,3 +1,4 @@
+const { Character, User } = require('../models');
 
 const resolvers = {
     Query: {
