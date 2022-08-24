@@ -11,9 +11,6 @@ function Navigator() {
                 <Nav variant='pills'>
                     { Auth.loggedIn() ? (
                         <Nav.Item>
-                            {/* <Nav.Link onClick={() => Auth.logout()}>
-                                Logout
-                            </Nav.Link> */}
                             <NavDropdown/>
                         </Nav.Item>
                     ) : (
