@@ -3,11 +3,11 @@ import { Container } from 'react-bootstrap';
 import Auth from '../utils/auth';
 
 function Profile() {
-    const user = Auth.getProfile();
-    console.log(user);
+    const { data: { username }} = Auth.getProfile();
+
     return (
         <Container>
-            <h1>This is your profile!</h1>
+            <h1>Welcome {username}!</h1>
         </Container>
     )
 };
