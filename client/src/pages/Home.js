@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 function Home() {
     return (
         <Container>
-            Welcome!
+            Welcome to the Home page!
         </Container>
     )
 };

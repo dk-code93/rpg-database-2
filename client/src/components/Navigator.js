@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import NavDropdown from './NavDropdown';
 import Auth from '../utils/auth';
 
 function Navigator() {
@@ -10,9 +11,10 @@ function Navigator() {
                 <Nav variant='pills'>
                     { Auth.loggedIn() ? (
                         <Nav.Item>
-                            <Nav.Link onClick={() => Auth.logout()}>
+                            {/* <Nav.Link onClick={() => Auth.logout()}>
                                 Logout
-                            </Nav.Link>
+                            </Nav.Link> */}
+                            <NavDropdown/>
                         </Nav.Item>
                     ) : (
                         <Nav.Item>
