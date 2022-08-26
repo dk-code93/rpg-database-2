@@ -38,6 +38,7 @@ function Signup() {
     return (
         <Container>
             <Form onSubmit={handleSubmit}>
+                {/* Username */}
                 <Form.Group className="mb-2" controlId="username">
                     <Form.Label>Username</Form.Label>
                     <Form.Control 
@@ -48,7 +49,7 @@ function Signup() {
                         defaultValue={formState.username}
                     />
                 </Form.Group>
-                
+                {/* Email */}
                 <Form.Group className="mb-2" controlId="email">
                     <Form.Label>Email</Form.Label>
                     <Form.Control 
@@ -59,7 +60,7 @@ function Signup() {
                         defaultValue={formState.email}
                     />
                 </Form.Group>
-
+                {/* Password */}
                 <Form.Group className="mb-2" controlId="password">
                     <Form.Label>Password</Form.Label>
                     <Form.Control 

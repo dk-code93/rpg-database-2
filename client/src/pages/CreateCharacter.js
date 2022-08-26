@@ -19,6 +19,7 @@ function CreateCharacter() {
 
     return (
         <Form>
+            {/* Character name */}
             <Form.Group>
                 <Form.Label>Name</Form.Label>
                 <Form.Control 
@@ -32,6 +33,7 @@ function CreateCharacter() {
 
             <Row>
                 <Col>
+                {/* Class select */}
                     <Form.Group>
                         <Form.Label>Class</Form.Label>
                         <Form.Select 
@@ -49,6 +51,7 @@ function CreateCharacter() {
                     </Form.Group>
                 </Col>
                 <Col>
+                {/* Level */}
                     <Form.Group>
                         <Form.Label>Level</Form.Label>
                         <Form.Control 
