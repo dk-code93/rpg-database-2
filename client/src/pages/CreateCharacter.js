@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Stack } from 'react-bootstrap';
-import { classes } from '../utils/data';
+import { classes, statAttributes } from '../utils/data';
 
 function CreateCharacter() {
     const [formState, setFormState] = useState({
@@ -75,14 +75,20 @@ function CreateCharacter() {
             </Row>
 
             <Row>
-                <Stack>
-                    <Form.Group>
-                        <Form.Label>Strength</Form.Label>
-                        <Form.Control
-                            type='number'
-                            
-                        />
-                    </Form.Group>
+                <Stack direction='horizontal' gap={2}>
+                    { statAttributes.map( stat => (
+                        <Form.Group key={stat.name}>
+                            <Form.Label>{stat.name}</Form.Label>
+                            <Form.Control
+                                type='number'
+                                placeholder='0'
+                                name={stat.short}
+                                min='0'
+                                value={formState.stats[stat.short]}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                    ))}
                 </Stack>
             </Row>
             
