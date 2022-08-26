@@ -1,11 +1,14 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 function CreateCharacter() {
     return (
-        <Container>
-            
-        </Container>
+        <Form>
+            <Form.Group>
+                <Form.Label>Name</Form.Label>
+                <Form.Control type='text' placeholder="Enter your character's name"/>
+            </Form.Group>
+        </Form>
     )
 };
 
