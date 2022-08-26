@@ -9,15 +9,17 @@ import Profile from './pages/Profile';
 
 function Main() {
     return (
-        <Container fluid>
+        <>
             <Navigator/>
-            <Routes>
-                <Route path='/' element={<Home/>} />
-                <Route path='/login' element={<Login/>} />
-                <Route path='/signup' element={<Signup/>} />
-                <Route path='/profile' element={<Profile/>} />
-            </Routes>
-        </Container>
+            <Container fluid>
+                <Routes>
+                    <Route path='/' element={<Home/>} />
+                    <Route path='/login' element={<Login/>} />
+                    <Route path='/signup' element={<Signup/>} />
+                    <Route path='/profile' element={<Profile/>} />
+                </Routes>
+            </Container>
+        </>
     )
 }
 
