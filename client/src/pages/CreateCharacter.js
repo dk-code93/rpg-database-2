@@ -15,7 +15,6 @@ function CreateCharacter() {
             ...formState,
             [name]: value,
         });
-        console.log(value, formState)
     }
 
     return (
@@ -25,7 +24,7 @@ function CreateCharacter() {
                 <Form.Control 
                     type='text' 
                     name='name'
-                    placeholder="Enter your character's name"
+                    placeholder="Enter your character's full name"
                     value={formState.name}
                     onChange={handleChange}
                 />
@@ -41,6 +40,7 @@ function CreateCharacter() {
                             value={formState.class}
                             onChange={handleChange}
                         >
+                            <option value='' disabled>Select a class</option>
                             { classes.map( classOption => (
                                 <option key={classOption} value={classOption}>{classOption}</option>
                                 ))
