@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Row, Col, Stack } from 'react-bootstrap';
+import { Form, Row, Col, Stack, Button } from 'react-bootstrap';
 import { classes, statAttributes } from '../utils/data';
 
 function CreateCharacter() {
@@ -19,11 +19,32 @@ function CreateCharacter() {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
+        // If the field is a stat, update differently
+        if(event.target.classList.contains('statistic')) {
+            setFormState({
+                ...formState,
+                stats: {
+                    ...formState.stats,
+                    [name]: value
+                }
+            });
+            return;
+        }
         setFormState({
             ...formState,
             [name]: value,
         });
     }
+
+    // const rollStats = (event) => {
+    //     event.preventDefault();
+    //     // For each stat
+    //     statAttributes.forEach(stat => {
+    //         const element = document.getElementsByName(stat.short);
+    //         element.value = Math.floor(Math.random() * 20) + 1;
+    //     })
+        
+    // }
 
     return (
         <Form>
@@ -84,6 +105,7 @@ function CreateCharacter() {
                                 placeholder='0'
                                 name={stat.short}
                                 min='0'
+                                className='statistic'
                                 value={formState.stats[stat.short]}
                                 onChange={handleChange}
                             />
@@ -91,6 +113,7 @@ function CreateCharacter() {
                     ))}
                 </Stack>
             </Row>
+            {/* <Button variant='dark' onClick={rollStats}>Roll stats</Button> */}
             
         </Form>
     )
