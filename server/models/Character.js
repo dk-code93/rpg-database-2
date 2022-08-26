@@ -10,9 +10,34 @@ const characterSchema = new Schema({
     image: {
       type: String,
       required: true,
-      unique: true,
-      match: [/.+@.+\..+/, 'Must match an email address!'],
     },
+    description: {
+      type: String,
+      required: false,
+      maxLength: [250, 'Description can only be 250 characters'],
+    },
+    class: {
+      type: String,
+      required: false,
+    },
+    base_hp: {
+      type: Number,
+      required: true,
+      default: 1,
+    },
+    stats: {
+      type: Map,
+      of: Number,
+      default: {
+        int: 0,
+        dex: 0,
+        str: 0,
+        cha: 0,
+        wis: 0,
+        con: 0,
+      },
+    },
+
 }, {
     timestamps: true,
 });
