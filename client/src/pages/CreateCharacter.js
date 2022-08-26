@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Row, Col } from 'react-bootstrap';
+import { classes } from '../utils/data';
 
 function CreateCharacter() {
     return (
@@ -14,7 +15,10 @@ function CreateCharacter() {
                     <Form.Group>
                         <Form.Label>Class</Form.Label>
                         <Form.Select id='class-select' placeholder='Select a class'>
-                            
+                            { classes.map( option => (
+                                <option key={option} value={option}>{option}</option>
+                                ))
+                            }
                         </Form.Select>
                     </Form.Group>
                 </Col>
