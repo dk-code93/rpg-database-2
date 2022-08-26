@@ -1,4 +1,4 @@
-const classes = [
+const classList = [
     'Fighter',
     'Wizard',
     'Sorcerer',
@@ -12,6 +12,8 @@ const classes = [
     'Monk',
     'Rogue',
 ];
+
+const classes = classList.sort()
 
 export {
     classes
