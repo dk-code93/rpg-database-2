@@ -25,7 +25,6 @@ function Signup() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log('butt got press', formState)
         try {
             const { data } = await addUser({
                 variables: { ...formState }
