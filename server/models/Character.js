@@ -20,6 +20,11 @@ const characterSchema = new Schema({
       type: String,
       required: false,
     },
+    level: {
+      type: Number,
+      required: true,
+      default: 1,
+    },
     base_hp: {
       type: Number,
       required: true,
