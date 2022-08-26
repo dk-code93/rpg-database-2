@@ -12,7 +12,7 @@ function Main() {
     return (
         <>
             <Navigator/>
-            <Container fluid>
+            <Container>
                 <Routes>
                     <Route path='/' element={<Home/>} />
                     <Route path='/login' element={<Login/>} />
