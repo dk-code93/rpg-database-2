@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Row, Col } from 'react-bootstrap';
+import { Form, Row, Col, Stack } from 'react-bootstrap';
 import { classes } from '../utils/data';
 
 function CreateCharacter() {
@@ -7,6 +7,14 @@ function CreateCharacter() {
         name: '',
         level: 1,
         class: '',
+        stats: {
+            str: 0,
+            dex: 0, 
+            int: 0,
+            cha: 0,
+            wis: 0,
+            con: 0,
+        }
     });
 
     const handleChange = (event) => {
@@ -64,6 +72,18 @@ function CreateCharacter() {
                         />
                     </Form.Group>
                 </Col>
+            </Row>
+
+            <Row>
+                <Stack>
+                    <Form.Group>
+                        <Form.Label>Strength</Form.Label>
+                        <Form.Control
+                            type='number'
+                            
+                        />
+                    </Form.Group>
+                </Stack>
             </Row>
             
         </Form>
