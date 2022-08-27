@@ -36,16 +36,6 @@ function CreateCharacter() {
         });
     }
 
-    // const rollStats = (event) => {
-    //     event.preventDefault();
-    //     // For each stat
-    //     statAttributes.forEach(stat => {
-    //         const element = document.getElementsByName(stat.short);
-    //         element.value = Math.floor(Math.random() * 20) + 1;
-    //     })
-        
-    // }
-
     return (
         <Form>
             {/* Character name */}
@@ -113,7 +103,6 @@ function CreateCharacter() {
                     ))}
                 </Stack>
             </Row>
-            {/* <Button variant='dark' onClick={rollStats}>Roll stats</Button> */}
             
         </Form>
     )
