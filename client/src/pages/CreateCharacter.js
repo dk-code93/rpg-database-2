@@ -138,6 +138,13 @@ function CreateCharacter() {
                     ))}
                 </Stack>
             </Row>
+
+            <Row>
+                <Button
+                    variant='dark'
+                    type='submit'
+                >Save</Button>
+            </Row>
             
         </Form>
     )
