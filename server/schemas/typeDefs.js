@@ -15,12 +15,12 @@ const typeDefs = gql`
     }
 
     type Stats {
-        int: Number
-        dex: Number
-        str: Number
-        cha: Number
-        wis: Number
-        con: Number
+        int: Int
+        dex: Int
+        str: Int
+        cha: Int
+        wis: Int
+        con: Int
     }
 
     type Character {
@@ -29,8 +29,8 @@ const typeDefs = gql`
         image: String
         description: String
         class: String!
-        level: Number!
-        base_hp: Number!
+        level: Int!
+        base_hp: Int!
         stats: Stats!
     }
 
@@ -42,7 +42,7 @@ const typeDefs = gql`
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        createCharacter(name: String!, image: String, description: String, class: String!, level: Number): Character
+        createCharacter(name: String!, image: String, description: String, class: String!, level: Int!, base_hp: Int!,): Character
     }
 `;
 

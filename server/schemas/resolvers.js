@@ -35,7 +35,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        createCharacters: async (_parent, info, third) => {
+        createCharacter: async (_parent, info, third) => {
           console.log('info:', info)
           console.log('third', third)
         }
