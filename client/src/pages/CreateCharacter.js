@@ -8,6 +8,7 @@ function CreateCharacter() {
         level: 1,
         class: '',
         race: '',
+        base_hp: 1,
         stats: {
             str: 0,
             dex: 0, 
@@ -71,7 +72,7 @@ function CreateCharacter() {
                     </Form.Group>
                 </Col>
                 <Col>
-                {/* Level */}
+                {/* Race */}
                     <Form.Group>
                         <Form.Label>Race</Form.Label>
                         <Form.Select 
@@ -98,6 +99,20 @@ function CreateCharacter() {
                             placeholder='1'
                             min='1'
                             value={formState.level}
+                            onChange={handleChange}
+                        />
+                    </Form.Group>
+                </Col>
+                <Col>
+                {/* Hit Points */}
+                    <Form.Group>
+                        <Form.Label>Hit Points</Form.Label>
+                        <Form.Control 
+                            type='number' 
+                            name='base_hp'
+                            placeholder='1'
+                            min='1'
+                            value={formState.base_hp}
                             onChange={handleChange}
                         />
                     </Form.Group>
