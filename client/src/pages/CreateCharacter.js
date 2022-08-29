@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Form, Row, Col, Stack, Button } from 'react-bootstrap';
-import { classes, statAttributes } from '../utils/data';
+import { classes, statAttributes, races } from '../utils/data';
 
 function CreateCharacter() {
     const [formState, setFormState] = useState({
         name: '',
         level: 1,
         class: '',
+        race: '',
         stats: {
             str: 0,
             dex: 0, 
@@ -72,6 +73,24 @@ function CreateCharacter() {
                 <Col>
                 {/* Level */}
                     <Form.Group>
+                        <Form.Label>Race</Form.Label>
+                        <Form.Select 
+                            id='race-select'
+                            name='race'
+                            value={formState.race}
+                            onChange={handleChange}
+                        >
+                            <option value='' disabled>Select a Race</option>
+                            { races.map( raceOption => (
+                                <option key={raceOption} value={raceOption}>{raceOption}</option>
+                                ))
+                            }
+                        </Form.Select>
+                    </Form.Group>
+                </Col>
+                <Col>
+                {/* Level */}
+                    <Form.Group>
                         <Form.Label>Level</Form.Label>
                         <Form.Control 
                             type='number' 
@@ -86,6 +105,7 @@ function CreateCharacter() {
             </Row>
 
             <Row>
+                {/* Stats */}
                 <Stack direction='horizontal' gap={2}>
                     { statAttributes.map( stat => (
                         <Form.Group key={stat.name}>

@@ -13,6 +13,35 @@ const classList = [
     'Rogue',
 ];
 
+const raceList = [
+    'Dragonborn',
+    'Dwarf',
+    'Elf',
+    'Gnome',
+    'Half-Elf',
+    'Halfling',
+    'Half-Orc',
+    'Human',
+    'Tiefling',
+    'Aarakocra',
+    'Aasimar',
+    'Genasi',
+    'Bugbear',
+    'Centaur',
+    'Changeling',
+    'Firbolg',
+    'Goliath',
+    'Goblin',
+    'Hobgoblin',
+    'Kobold',
+    'Kenku',
+    'Orc',
+    'Lizardfolk',
+    'Tabaxi',
+    'Tortle',
+    'Triton'
+]
+
 const statAttributes = [
     {
         name: 'Strength',
@@ -40,9 +69,11 @@ const statAttributes = [
     },
 ]
 
-const classes = classList.sort()
+const classes = classList.sort();
+const races = raceList.sort();
 
 export {
     classes,
-    statAttributes
+    statAttributes,
+    races
 };
