@@ -23,3 +23,11 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+export const CREATE_CHARCTER = gql`
+  mutation createCharacter($name: String!, $image: String, $class: String!, $level: Int!, $base_hp: Int!) {
+    Character(name: $name, image: $image, class: $class, level: $level, base_hp: $base_hp) {
+      _id
+    }
+  }
+`
