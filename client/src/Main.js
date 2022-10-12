@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import CreateCharacter from './pages/CreateCharacter';
+import LoginRedirect from './components/LoginRedirect';
 
 function Main() {
     return (
@@ -17,8 +18,8 @@ function Main() {
                     <Route path='/' element={<Home/>} />
                     <Route path='/login' element={<Login/>} />
                     <Route path='/signup' element={<Signup/>} />
-                    <Route path='/profile' element={<Profile/>} />
-                    <Route path='/create/character' element={<CreateCharacter/>} />
+                    <Route path='/profile' element={<LoginRedirect element={<Profile/>}/>}/>
+                    <Route path='/create/character' element={<LoginRedirect element={<CreateCharacter/>}/>} />
                 </Routes>
             </Container>
         </>

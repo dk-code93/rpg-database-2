@@ -38,8 +38,13 @@ function CreateCharacter() {
         });
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(formState)
+    }
+
     return (
-        <Form>
+        <Form onSubmit={handleSubmit}>
             {/* Character name */}
             <Form.Group>
                 <Form.Label>Name</Form.Label>
